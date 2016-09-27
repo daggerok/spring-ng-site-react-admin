@@ -1,0 +1,29 @@
+src/main/resources/public
+client/src/vendor/
+*npm*.log*
+node_modules/
+out/
+build/
+.gradle
+gradle
+gradlew*
+
+### STS ###
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/

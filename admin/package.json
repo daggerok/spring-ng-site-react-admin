@@ -1,0 +1,57 @@
+{
+  "name": "admin-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production webpack --config ./config/webpack.prod.babel.js -c --process -p",
+    "start": "webpack -w --config ./config/webpack.babel.js -c --process"
+  },
+  "babel": {
+    "presets": [
+      "stage-0",
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "react-html-attrs",
+      "add-module-exports",
+      "transform-class-properties"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "babel-cli": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "bower": "*",
+    "css-loader": "*",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "npm-run-all": "^3.1.0",
+    "postcss-loader": "^0.13.0",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "*",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "keywords": [],
+  "main": "index.js",
+  "description": "admin-app",
+  "author": "daggerok",
+  "license": "ISC",
+  "config": {
+    "bower_directory": "src/vendor"
+  }
+}

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-ng-site-react-admin
+  data:
+    mongodb:
+      port: 0
+    rest:
+      base-path: /api
+  mustache:
+    suffix: .hbs
+    cache: false
+management:
+  context-path: /mgmt

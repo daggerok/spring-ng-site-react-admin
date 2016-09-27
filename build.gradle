@@ -1,0 +1,45 @@
+version '0.0.1'
+group 'daggerok'
+
+buildscript {
+  repositories { mavenCentral() }
+  dependencies { classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE' }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar { baseName = 'spring-ng-site-react-admin' }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories { mavenCentral() }
+
+dependencies {
+  compile('org.springframework.boot:spring-boot-starter-security')
+  compile('org.springframework.boot:spring-boot-starter-mustache')
+  compile('org.springframework.boot:spring-boot-starter-actuator')
+  compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+  compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+  compile('org.springframework.boot:spring-boot-devtools')
+  compile('org.projectlombok:lombok')
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+task client(type: Exec) {
+  workingDir './client'
+  commandLine './build.bash'
+}
+
+build.dependsOn client
+build.shouldRunAfter client
+
+task admin(type: Exec) {
+  workingDir './admin'
+  commandLine './build.bash'
+}
+
+build.dependsOn admin
+build.shouldRunAfter admin

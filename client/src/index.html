@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="client">
+<head>
+  <meta charset="UTF-8">
+  <title>client</title>
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/vendor/angular/angular-csp.css">
+  <link rel="stylesheet" href="/client.css">
+</head>
+<body class="container" ng-cloak="" ng-controller="MainCtrl">
+<h3>client</h3>
+<ul ng-repeat="user in users">
+  <li id="user-{{user.id}}">{{user.username}}</li>
+</ul>
+<script src="/vendor/babel/browser.js"></script>
+<script src="/vendor/jquery/dist/jquery.js"></script>
+<script src="/vendor/angular/angular.js"></script>
+<script src="/vendor/angular-route/angular-route.js"></script>
+<script type="text/babel" src="/client.js"></script>
+</body>
+</html>
